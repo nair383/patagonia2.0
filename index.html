@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patagonia Sushi & Cevichería</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="logo">Patagonia <span>Sushi & Cevichería</span></div>
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="menu.html">Menú & Pedidos</a>
+            <a href="#contacto">Ubicación</a>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubre el Auténtico Sabor Patagónico</h1>
+            <p>Disfruta de los mejores sushis, ceviches, tiraditos y gyozas en el corazón de Ñuñoa.</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn-primary">Ver Menú y Comprar</a>
+                <a href="https://wa.me/56968431740" target="_blank" class="btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="info-card">
+            <i class="fas fa-clock"></i>
+            <h3>Horarios</h3>
+            <p>Lun: 16:00 - 22:00 hrs</p>
+            <p>Mar a Sáb: 13:00 - 22:30 hrs</p>
+        </div>
+        <div class="info-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Ubicación</h3>
+            <p>Av. Echeñique 4715, Ñuñoa, Región Metropolitana</p>
+        </div>
+        <div class="info-card">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Contacto</h3>
+            <p>+56 9 6843 1740</p>
+            <p>Instagram: @patagonia.sushi</p>
+        </div>
+    </section>
+
+    <!-- Mapa interactivo -->
+    <section class="map-section" id="contacto">
+        <h2>Encuéntranos</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.17647249875!2d-70.5895!3d-33.4475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf01b1234567%3A0x123456789abcdef!2sAv.%20Eche%C3%B1ique%204715%2C%20%C3%91u%C3%B1oa%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1650000000000!5m2!1ses!2scl" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/56968431740" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+    <p>&copy; 2026 Patagonia Sushi & Cevichería. Todos los derechos reservados.</p>
+    <a href="https://nivvux.com" target="_blank" rel="noopener noreferrer" class="footer-link">Desarrollado por nivvux </p>
+    </footer>
+
+    <!-- Barra de Navegación Inferior Exclusiva para Celulares -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="menu.html" class="mobile-nav-item">
+            <i class="fas fa-utensils"></i>
+            <span>Menú</span>
+        </a>
+        <a href="#" class="mobile-nav-item" id="mobileCartTrigger" onclick="document.getElementById('cartIcon').click(); return false;">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Carrito</span>
+        </a>
+        <a href="https://wa.me/56968431740" target="_blank" class="mobile-nav-item">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

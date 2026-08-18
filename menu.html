@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Patagonia Sushi & Cevichería</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="logo">Patagonia <span>Sushi & Cevichería</span></div>
+        <nav class="nav-menu" id="navMenu">
+            <a href="index.html">Inicio</a>
+            <a href="menu.html" class="active">Menú & Pedidos</a>
+        </nav>
+        <div class="header-icons">
+            <div class="cart-icon" id="cartIcon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cartCount">0</span>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal del Menú -->
+    <main class="menu-container">
+        <h1>Nuestro Menú</h1>
+        
+        <!-- Categorías -->
+        <div class="category-filters">
+            <button class="filter-btn active" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="gyozas">Gyozas</button>
+            <button class="filter-btn" data-category="ceviches">Ceviches</button>
+            <button class="filter-btn" data-category="tiraditos">Tiraditos</button>
+            <button class="filter-btn" data-category="tempuras">Tempuras</button>
+        </div>
+
+        <!-- Cuadrícula de Productos -->
+        <div class="products-grid" id="productsGrid">
+            
+            <!-- Gyozas -->
+            <div class="product-card" data-category="gyozas">
+                <div class="product-info">
+                    <h3>Gyoza de Cerdo</h3>
+                    <p>Empanadillas estilo asiáticas, rellenas y cocinadas al vapor o salteadas.</p>
+                    <span class="price">$8.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Gyoza de Cerdo', 8000)">Agregar</button>
+            </div>
+
+            <div class="product-card" data-category="gyozas">
+                <div class="product-info">
+                    <h3>Gyoza de Pato</h3>
+                    <p>Empanadillas estilo asiáticas, rellenas y cocinadas al vapor o salteadas.</p>
+                    <span class="price">$12.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Gyoza de Pato', 12000)">Agregar</button>
+            </div>
+
+            <div class="product-card" data-category="gyozas">
+                <div class="product-info">
+                    <h3>Gyoza de Camarón</h3>
+                    <p>Empanadillas estilo asiáticas, rellenas y cocinadas al vapor o salteadas.</p>
+                    <span class="price">$9.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Gyoza de Camarón', 9000)">Agregar</button>
+            </div>
+
+            <!-- Ceviches -->
+            <div class="product-card" data-category="ceviches">
+                <div class="product-info">
+                    <h3>Ceviche de Pescado Blanco</h3>
+                    <p>Pescado o mariscos con leche de tigre y guarniciones.</p>
+                    <span class="price">$10.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Ceviche de Pescado Blanco', 10000)">Agregar</button>
+            </div>
+
+            <div class="product-card" data-category="ceviches">
+                <div class="product-info">
+                    <h3>Ceviche Del Chef Omakase</h3>
+                    <p>Pescado o mariscos con leche de tigre y guarniciones.</p>
+                    <span class="price">$12.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Ceviche Del Chef Omakase', 12000)">Agregar</button>
+            </div>
+
+            <div class="product-card" data-category="ceviches">
+                <div class="product-info">
+                    <h3>Ceviche de Salmón, Atún O Camarón</h3>
+                    <p>Pescado o mariscos con leche de tigre y guarniciones.</p>
+                    <span class="price">$12.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Ceviche de Salmón, Atún O Camarón', 12000)">Agregar</button>
+            </div>
+
+            <!-- Tiraditos -->
+            <div class="product-card" data-category="tiraditos">
+                <div class="product-info">
+                    <h3>Tiradito Mixto</h3>
+                    <p>Pescado o mariscos con leche de tigre el día, palta y guarniciones.</p>
+                    <span class="price">$20.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Tiradito Mixto', 20000)">Agregar</button>
+            </div>
+
+            <div class="product-card" data-category="tiraditos">
+                <div class="product-info">
+                    <h3>Tiradito Del Día Omakase</h3>
+                    <p>Pescado o mariscos con leche de tigre el día, palta y guarniciones.</p>
+                    <span class="price">$20.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Tiradito Del Día Omakase', 20000)">Agregar</button>
+            </div>
+
+            <div class="product-card" data-category="tiraditos">
+                <div class="product-info">
+                    <h3>Tiradito Al Olivo</h3>
+                    <p>Pescado o mariscos con leche de tigre el día, palta y guarniciones.</p>
+                    <span class="price">$20.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Tiradito Al Olivo', 20000)">Agregar</button>
+            </div>
+
+            <div class="product-card" data-category="tiraditos">
+                <div class="product-info">
+                    <h3>Tiradito De Ostión O Atún</h3>
+                    <p>Pescado o mariscos con leche de tigre el día, palta y guarniciones.</p>
+                    <span class="price">$21.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Tiradito De Ostión O Atún', 21000)">Agregar</button>
+            </div>
+
+            <!-- Tempuras -->
+            <div class="product-card" data-category="tempuras">
+                <div class="product-info">
+                    <h3>Tempura Pescado Del Día</h3>
+                    <p>Pescado o mariscos en tempura acompañados con salsa.</p>
+                    <span class="price">$8.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Tempura Pescado Del Día', 8000)">Agregar</button>
+            </div>
+
+            <div class="product-card" data-category="tempuras">
+                <div class="product-info">
+                    <h3>Tempura Camarones</h3>
+                    <p>Pescado o mariscos en tempura acompañados con salsa.</p>
+                    <span class="price">$9.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Tempura Camarones', 9000)">Agregar</button>
+            </div>
+
+            <div class="product-card" data-category="tempuras">
+                <div class="product-info">
+                    <h3>Tempura Salmón O Atún</h3>
+                    <p>Pescado o mariscos en tempura acompañados con salsa.</p>
+                    <span class="price">$9.000</span>
+                </div>
+                <button class="btn-add" onclick="addToCart('Tempura Salmón O Atún', 9000)">Agregar</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Carrito Lateral (Drawer) -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button id="closeCart" class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">El carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button id="checkoutBtn" class="btn-checkout">Comprar por WhatsApp</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/56968431740" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+    <p>&copy; 2026 Patagonia Sushi & Cevichería. Todos los derechos reservados.</p>
+    <a href="https://nivvux.com" target="_blank" rel="noopener noreferrer" class="footer-link">Desarrollado por nivvux</p>
+    </footer>
+
+    <!-- Barra de Navegación Inferior Exclusiva para Celulares -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="menu.html" class="mobile-nav-item active">
+            <i class="fas fa-utensils"></i>
+            <span>Menú</span>
+        </a>
+        <a href="#" class="mobile-nav-item" id="mobileCartTrigger" onclick="document.getElementById('cartIcon').click(); return false;">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Carrito</span>
+        </a>
+        <a href="https://wa.me/56968431740" target="_blank" class="mobile-nav-item">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
